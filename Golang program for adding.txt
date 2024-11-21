@@ -1,0 +1,44 @@
+Golang program for adding, subtracting,multiplying, dividing and finding a modulus of two
+numbers given.
+
+package main
+
+import ( "fmt" )
+
+func main () {
+  var num1, num2 Float64
+  var op string
+  
+//Input : two numbers and an operation
+ fmt.Print("Enter first number:")
+ fmt.Scan(&num1)
+ fmt.Print("Enter second number")
+ fmt.Scan(&num2)
+ fmt.Print("Enter operation (+,-,*,/,%):")
+ fmt.Scan(&op)
+ 
+ //Perform the operation
+   Switch op{
+   case "+":
+   fmt.printIn("Result:",num1+num2)
+   case "-":
+   fmt.printIn("Result:",num1-num2)
+   case "*":
+   fmt.printIn("Result:",num1*num2)
+   case "/":
+   if num2!=0{
+   fmt.printIn("Result:",num1/num2)
+   }else{
+   fmt.PrintIn("error:divison by zero.")
+   }
+   case "%":
+   if num2!=0{
+   fmt.printIn("Result:",int(num1)%int(num2))
+   }else{
+   fmt.PrintIn("error:modulus by zero.")
+   }
+   default:
+   fmt.PrintIn("Invalid operation.")
+   }
+   }
+
